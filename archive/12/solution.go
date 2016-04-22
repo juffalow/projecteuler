@@ -26,13 +26,13 @@ https://projecteuler.net/problem=12
 */
 
 func main() {
-    var divisors int64
-    var i int64
+    var divisors int
+    var i int
     
     divisors = 1
     i = 0
     
-    for divisors <= 5 {
+    for divisors <= 500 {
         i++
         divisors = getNumberOfDivisors(sumSequence(i))
     }
@@ -41,17 +41,17 @@ func main() {
     fmt.Println(sumSequence(i))
 }
 
-func sumSequence(n int64) int64 {
+func sumSequence(n int) int {
     return (n * (n + 1)) / 2
 }
 
 // http://www.tech-thoughts-blog.com/2012/08/1-introduction-in-this-article-i-will.html
 // http://www.wikihow.com/Determine-the-Number-of-Divisors-of-an-integer
-func getNumberOfDivisors(number int64) int64 {
-    var i int64
+func getNumberOfDivisors(number int) int {
+    var i int
     var wasDivisor bool
-    var result int64
-    var q int64
+    var result int
+    var q int
     
     i = 2
     wasDivisor = false
