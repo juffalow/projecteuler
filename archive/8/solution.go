@@ -51,9 +51,6 @@ func main() {
         product = countProduct(number[i:i+adjacentDigits])
         if product > max {
             max = product
-		fmt.Println(max)
-		fmt.Println(number[i:i+adjacentDigits])
-		fmt.Println()
         }
     }
 
