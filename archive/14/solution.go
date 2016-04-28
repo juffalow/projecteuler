@@ -26,8 +26,6 @@ https://projecteuler.net/problem=14
 
 */
 
-var cache [1000000]int
-
 func main() {
     var max int
     var steps int
