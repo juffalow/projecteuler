@@ -24,21 +24,20 @@ https://projecteuler.net/problem=23
 */
 
 func main() {
-	var abundants []int
+	var abundants map[int]int
+	abundants = make(map[int]int)
 	total := 0
 
 	for i := 1; i < 28123; i++ {
 		if sumDivisors(i) > i {
-			abundants = append(abundants, i)
+			abundants[i] = i
 		}
 		total += i
-		First:
 		for _, number := range abundants {
-			for _, next := range abundants {
-				if number + next == i{
-					total -= i
-					break First
-				}
+			_, ok := abundants[i - number]
+			if ok {
+				total -= i
+				break
 			}
 		}
 	}
