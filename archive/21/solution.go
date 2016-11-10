@@ -36,10 +36,12 @@ func sumDivisors(n int) int {
 	sum := 0
 	root := int(math.Sqrt(float64(n)))
 
-	for i := 2; i < root; i++ {
+	for i := 2; i <= root; i++ {
 		if n % i == 0 {
 			sum += i
-			sum += n / i
+			if n / i != i {
+				sum += n / i
+			}
 		}
 	}
 
