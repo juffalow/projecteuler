@@ -58,7 +58,7 @@ func sieveOfEratosthenes(n int) []int {
 	prime := make([]bool, n + 1)
 
 	for p := 2; p * p <= n; p++ {
-		if prime[p] == true {
+		if prime[p] == false {
 			for i := p * 2; i <= n; i+= p {
 				prime[i] = true
 			}
