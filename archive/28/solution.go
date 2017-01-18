@@ -23,16 +23,7 @@ https://projecteuler.net/problem=28
 */
 
 func main() {
-    sum := 1
-    number := 1
-    jump := 2
-	for ; number <= 1001 * 1001; {
-        number += jump
-        sum += number
-        if number - jump * (jump + 2) == 1 {
-            jump += 2
-        }
-	}
-    sum -= number
-	fmt.Println(sum)
+    length := 1001
+    s := (length - 1) / 2
+	fmt.Println((16 * s * s * s + 30 * s * s + 26 * s + 3) / 3)
 }
